@@ -1,0 +1,8 @@
+Tri, Tri Again, Again
+Place a collection of right triangles into the grid below. The triangles must have integer-length legs, and the legs must be along grid lines.
+
+Each triangle must contain exactly one number. That number represents the area of the triangle containing it. (Every number must eventually be contained in exactly one triangle.) The entire square (1-by-1 cell) containing the number must be inside the triangle.
+
+Triangles’ interiors may not overlap. (But triangles’ boundaries may intersect, as seen in the example.)
+
+As your answer to this month’s puzzle, please send in the product of the odd horizontal leg lengths.
