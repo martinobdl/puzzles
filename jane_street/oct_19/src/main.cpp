@@ -57,11 +57,15 @@ bool solve( const Board& board,
     return false;
 }
 
-int main(){
+int main(int argc, char* argv[]){
 
+    if(argc==1)
+    {
+        return 1;
+    }
     std::cout << "SOLVING..." << std::endl;
     // Board board(17);
-    Board board("data/data.csv");
+    Board board((std::string(argv[1])));
     std::vector<Triangle> solution_set;
     std::vector<std::tuple<unsigned, unsigned>> coordinates = board.get_coordinates();
     if(solve(board, coordinates, solution_set, false))
