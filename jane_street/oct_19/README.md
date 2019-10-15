@@ -15,7 +15,7 @@ Checking if a proposed solution is valid is polynomial in time. Hence we can thi
 
 This is called [algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X).
 
-![Alt Text](https://github.com/martinobdl/puzzles/tree/master/jane_street/oct_19/img/Sudoku_solved_by_bactracking.gif)
+![Alt Text](img/Sudoku_solved_by_bactracking.gif)
 
 Since the problem seems very similar to a sudoku, we can hope to formulate the problem in a [exact cover problem](https://en.wikipedia.org/wiki/Exact_cover) and use the efficient [dancing links algorithm](https://en.wikipedia.org/wiki/Dancing_Links).
 Sadly I couldn't find a translation of the problem as an exact cover even I'm confident this can be done.
@@ -26,4 +26,4 @@ make
 ./bin/TriTriAgain data/data.csv
 python3 draw.py data/data.csv triangles.csv
 ```
-![Alt Text](https://github.com/martinobdl/puzzles/tree/master/jane_street/oct_19/img/TriTriAgain.png)
+![Alt Text](img/TriTriAgain.png)
