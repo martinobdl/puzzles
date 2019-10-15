@@ -2,7 +2,7 @@ import turtle
 import numpy as np
 import sys
 
-def print_board(board_data,triangle_data,pic_file="TriTriAgain.ps"):
+def print_board(board_data,triangle_data,pic_file="TriTriAgainAgain.ps"):
     board = np.loadtxt(open(board_data, "rb"), delimiter=";")
     triangles = np.loadtxt(open(triangle_data, "rb"), delimiter=";")
     N = board.shape[0] # N by N grid

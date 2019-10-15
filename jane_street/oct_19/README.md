@@ -1,6 +1,9 @@
-# TriTriAgain
+# TriTriAgainAgain
 
-Rules: place a collection of triangles on the grid such that:
+https://www.janestreet.com/puzzles/tri-tri-again-again/
+
+#### Rules
+Place a collection of triangles on the grid such that:
 * triangles are of integer coordinates and right
 * each triangle contains only one numbered square and contains it fully
 * the area of a triangle is equal to the number it contains
@@ -17,13 +20,14 @@ This is called [algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X
 
 ![Alt Text](img/Sudoku_solved_by_bactracking.gif)
 
-Since the problem seems very similar to a sudoku, we can hope to formulate the problem in a [exact cover problem](https://en.wikipedia.org/wiki/Exact_cover) and use the efficient [dancing links algorithm](https://en.wikipedia.org/wiki/Dancing_Links).
-Sadly I couldn't find a translation of the problem as an exact cover even I'm confident this can be done.
+Since the problem seems very similar to a sudoku, we can hope to formulate it as an [exact cover problem](https://en.wikipedia.org/wiki/Exact_cover) and use the efficient [dancing links algorithm](https://en.wikipedia.org/wiki/Dancing_Links).
+Sadly I couldn't find a translation of the problem as an exact cover, even if I'm confident this can be done.
 The naive solution, implemented in c++ thinking a little about efficiency, gives satisfactory performances (~7s for a 17x17 grid). Then the problem is drawn in a .ps file with turtle python module
 #### run example
 ```
 make
-./bin/TriTriAgain data/data.csv
+./bin/TriTriAgainAgain data/data.csv
 python3 draw.py data/data.csv triangles.csv
 ```
-![Alt Text](img/TriTriAgain.png)
+### Example Solution
+![Alt Text](img/TriTriAgainAgain.png)

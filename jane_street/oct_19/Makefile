@@ -30,7 +30,7 @@ CPPFLAGS += -I$(INC_DIR)
 
 LDFLAGS += -larmadillo
 
-EXE = TriTriAgain
+EXE = TriTriAgainAgain
 EXE_TEST = executeTests
 
 SCR_DIR = src
