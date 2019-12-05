@@ -17,7 +17,7 @@ Suppose we are given 0111
 We can read bit by bit and keep track of all neighborhood that could have originated the current bit and are consistent with the sequences reconstructed so far.
 
 
-<img src="https://github.com/martinobdl/google_ctf_2019/blob/master/CellularAutomata/cellautomata_diagram.jpg" width="500" height="400">
+<img src="https://github.com/martinobdl/puzzles/blob/master/google_ctf_2019/CellularAutomata/cellautomata_diagram.jpg" width="500" height="400">
 
 This is the tree of possibilities, the states are then cyclical (first and last element are neighbors) and so we can discard most of the results, leaving us with 0010 and 1101, which in fact lead to the state 0111 after application of rule126. Implementing this algorithm would leave us with a O(N) algorithm to find all possible previous states and write to a csv all possible states in hex.
 Then we brute force all possible keys by grepping CTF with openssl suggested by the instructions  at https://cellularautomata.web.ctfcompetition.com
