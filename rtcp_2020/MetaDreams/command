@@ -1,0 +1,10 @@
+#!/bin/bash
+python3 Reconstruction-Style/src/main.py test \
+    --content-image ./Reconstruction-Style/images/content-images/white.jpg\
+    --output-image ./Reconstruction-Style/images/output-images/dream.jpg\
+    --model ./Reconstruction-Style/Dream.pth\
+    --content-size 256\
+    --original-colors 0\
+    --cuda 0
+
+convert ./Reconstruction-Style/images/output-images/dream.jpg -scale 1x1\! -format '%[pixel:s]\n' info:- | awk -F '[(,)]' '{printf("#%x%x%x\n",$2,$3,$4)}'
