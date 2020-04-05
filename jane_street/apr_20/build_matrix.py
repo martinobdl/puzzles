@@ -1,5 +1,5 @@
 import numpy as np 
-
+from tqdm import tqdm as tqdm
 
 def build_solver(N):
     N_tri = sum([2*j+1 for j in range(N-1)])
@@ -14,7 +14,7 @@ def build_solver(N):
             n = int((i*(i+1)/2)+j+1)
             d[(i,j)] = n
 
-    for i in range(1,N):
+    for i in tqdm(range(1,N)):
         for j in range(2*i-1):
             if j==0:
                 row = np.zeros(N_points).astype(int)
@@ -40,12 +40,12 @@ def build_solver(N):
                 row[p3-1]=1
                 A = np.concatenate((A, row.reshape(1,N_points)), axis=0)
     A = A[1:,:]
-    print(A.shape[0])
-    np.savetxt("./data/tri_"+str(N)+".txt",A,header=str(A.shape[1]),comments="",fmt='%d')
+    # print(A.shape[0])
+    np.savetxt("./dlx/data/tri_"+str(N)+".txt",A,header=str(A.shape[1]),comments="",fmt='%d')
 
 if __name__ == "__main__":
     for N in range(2,41):
         if int(N*(N+1)/2%3==0):
-            # build_solver(N)
-            print(N)
+        	print(N)
+            build_solver(N)
 
